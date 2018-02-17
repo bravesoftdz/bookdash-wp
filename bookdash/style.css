@@ -11,8 +11,6 @@ Tags: book dash
 Text Domain: bookdash
 */
 
-@charset "utf-8";
-
 /* -------------- BODY */
 
 body {
@@ -473,6 +471,10 @@ a.post-edit-link:hover {
 	margin-bottom: 2em;
 	margin-right: 0.5em;
 }
+/* No space after last entry in directory */
+.single-staff:last-child {
+	margin-bottom: 0;
+}
 .single-staff img {
 	height: 4em;
 	width: 4em;
@@ -485,6 +487,12 @@ a.post-edit-link:hover {
 	filter: grayscale(100%);
 	filter: gray;
 	/*filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale"); not working */
+}
+/* Clear floats after directory */
+.staff-directory:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /* Audio playback */
